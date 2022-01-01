@@ -171,7 +171,7 @@ def configure(conf):
 	elif conf.env.COMPILER_CC == 'owcc':
 		pass
 	else:
-		conf.env.append_unique('DEFINES', ['stricmp=strcasecmp', 'strnicmp=strncasecmp', '_snprintf=snprintf', '_vsnprintf=vsnprintf', '_LINUX', 'LINUX'])
+		conf.env.append_unique('DEFINES', ['stricmp=strcasecmp', 'strnicmp=strncasecmp', '_snprintf=snprintf', '_vsnprintf=vsnprintf', '_LINUX', 'LINUX', '__STRINGS_H_COMPAT_HACK'])
 		conf.env.append_unique('CXXFLAGS', ['-Wno-invalid-offsetof', '-fno-rtti', '-fno-exceptions'])
 
 	# strip lib from pattern
